@@ -1,5 +1,5 @@
 def arrayToCsv:
-  (map(keys) | add | unique) as $cols |
+  (.[0] | keys_unsorted) as $cols |
   map(
     . as $row |
     $cols |
